@@ -1,0 +1,8 @@
+---
+  - name: Get security_config
+    hosts: host3
+    tasks:
+      - name: Get security_cofig
+        fetch:
+          src: /tmp/security_config
+          dest: /tmp/

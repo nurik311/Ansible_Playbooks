@@ -1,0 +1,11 @@
+---
+  - name: copy to remotehost
+    hosts: pocservers
+    gather_facts: yes
+    tasks:
+      - name: Copy to CentOS
+        copy:
+          src: /tmp/testing
+          dest: /tmp/
+        when: ansible_distribution == "CentOS" and
+              ansible_distribution_major_version == "7"

@@ -1,0 +1,10 @@
+---
+  - name: ping servers
+    hosts: all
+    gather_facts: yes
+    tasks: 
+      - name: ping poc-servers
+        ping:
+        
+              
+

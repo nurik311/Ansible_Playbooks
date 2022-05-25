@@ -1,0 +1,12 @@
+---
+  - name: shut down remote servers
+    hosts: all
+    gather_facts:
+    tasks:
+      - name: ping 
+        ping:
+      - name: shut down
+        shell: "sleep 5 && shutdown"
+        
+
+        

@@ -1,0 +1,16 @@
+---
+  - name: modify content
+    hosts: pocservers
+    tasks:
+      - name: add new line
+        lineinfile: 
+          path: /tmp/testing
+        
+          line: "This is line by Ansible"
+        when: ansible_distribution == "CentOS" and 
+              ansible_distribution_major_version == "7"  
+
+
+
+        
+      

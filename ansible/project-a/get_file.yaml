@@ -1,0 +1,11 @@
+---
+  - name: Copy from remotehosts
+    hosts: centos-server
+    tasks: 
+      - name: get file
+        fetch: 
+          src: /tmp/testing
+          dest: /tmp
+        
+
+  

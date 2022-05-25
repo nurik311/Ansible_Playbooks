@@ -1,0 +1,10 @@
+---
+  - name: Add packages
+    hosts: all
+    gather_facts: yes
+    tasks: 
+      - name: install vim via yum
+        yum:
+          name: vim
+          state: latest
+        when: ansible_pkg_mgr == "yum"

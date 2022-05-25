@@ -1,0 +1,7 @@
+
+# Task "install packages " Variables
+run_task: yes
+packages:
+  - vim
+  - tree
+  - curl

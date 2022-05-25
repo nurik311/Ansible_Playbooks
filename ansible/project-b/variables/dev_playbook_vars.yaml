@@ -1,0 +1,3 @@
+# Play Variables
+target_hosts: dev
+facts: yes

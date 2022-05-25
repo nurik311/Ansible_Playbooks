@@ -1,0 +1,9 @@
+---
+  - name: copy security_config file
+    hosts: Security_group1        # target group defined in inventory.yaml
+    tasks: 
+      - name: copy file
+        copy:
+          src: /tmp/security_config  #local host file location
+          dest: /tmp/                #remote host file location
+          

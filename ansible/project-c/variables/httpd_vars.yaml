@@ -1,0 +1,6 @@
+# Play Variables
+target_hosts: network
+facts: yes
+
+# Task Start Apache
+httpd_state: started # Allowed values 'started', 'stopped', 'restarted', 'reloaded'

@@ -1,0 +1,6 @@
+all:                                  # Default 'all' group
+  hosts:                              # Add 'ungrouped' servers
+     
+    
+     
+    

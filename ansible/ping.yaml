@@ -1,0 +1,6 @@
+---
+  - name: Ping Template
+    hosts: testgroup1
+    tasks: 
+      - name: Ping
+        ping:

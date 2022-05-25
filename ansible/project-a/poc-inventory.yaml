@@ -1,0 +1,13 @@
+all:                                  # Default 'all' group
+  hosts:                              #  add 'ungrouped' servers
+  children:
+    pocservers:
+      hosts:
+        centos-server:
+          ansible_host: 10.108.0.3
+          ansible_port: 55500 
+        ubuntu-server:
+          ansible_host: 10.108.0.4
+          ansible_port: 55500  
+
+     

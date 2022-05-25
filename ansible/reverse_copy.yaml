@@ -1,0 +1,9 @@
+---
+  - name: reverse_copy
+    hosts: host1
+    tasks:
+      - name: get file
+        fetch:
+          src: /tmp/network_config
+          dest: /tmp/network_config
+          

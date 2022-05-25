@@ -1,0 +1,24 @@
+---
+  - name: Install and configure Apache
+    hosts: "{{ target_hosts }}"
+    gather_facts: "{{ facts }}"
+    vars_files:
+      - ../variables/httpd_vars.yaml
+    tasks:
+      - name: Ping, Install Apache, Start Apache
+        block:
+          - name: Ping
+            ping:
+           
+    
+          - name: Install Apache
+            yum:
+              state: latest
+              name: httpd
+            
+    
+          - name: Start Apache
+            systemd:
+              state: "{{ httpd_state }}" 
+              name: httpd
+        when: ansible_pkg_mgr == "yum" and ansible_distribution == "CentOS"

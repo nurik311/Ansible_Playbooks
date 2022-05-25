@@ -1,0 +1,5 @@
+
+[remotehosts]
+host1 ansible_ssh_host=159.203.64.224
+host2 ansible_ssh_host=68.183.152.136
+host3 ansible_ssh_host=161.35.191.76

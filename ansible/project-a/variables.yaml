@@ -1,0 +1,13 @@
+---
+  - name: call variables
+    hosts: all
+    gather_facts: yes
+    vars:
+      - a: "hello"
+      - b: "bye"
+    tasks: 
+      - name: print message
+        debug:
+          msg: "Python Version = {{ ansible_python_version }}"
+
+      

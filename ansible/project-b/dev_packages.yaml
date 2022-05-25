@@ -1,0 +1,13 @@
+---
+  - name: Install YUM packages
+    hosts: "{{ target_hosts }}" 
+    gather_facts: "{{ facts }}"
+    vars_files: 
+      - variables/dev_packages_vars.yaml
+      - variables/dev_playbook_vars.yaml
+    tasks: 
+      - name: install packages
+        yum: 
+          name: "{{ packages }}"
+          state: latest 
+        when: ansible_pkg_mgr == "yum" and run_task is defined

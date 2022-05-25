@@ -1,0 +1,17 @@
+# Dev Inventory
+
+all:
+  # add hosts that are not part of any group here
+  hosts: 
+
+  # add groups here
+  children: 
+    # Network Group - add all network related hosts here
+    network: 
+      hosts:
+        host1: 
+          ansible_host: 10.108.0.3
+          ansible_port: 55500
+        host2: 
+          ansible_host: 10.108.0.4
+          ansible_port: 55500
